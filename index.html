@@ -12,7 +12,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#8b5fbf">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Adedolapo">
 <noscript><style>.envelope{display:none}.letter{display:block}.letter-body .word{opacity:1;filter:none}.reveal{opacity:1;transform:none}</style></noscript>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
 
@@ -278,6 +286,23 @@
     </div>
   </section>
 
+  <!-- INSTALL SECTION -->
+  <section class="section install-section install-hidden" id="installSection">
+    <div class="install-card">
+      <button type="button" class="install-close" id="installClose" aria-label="Hide this card">&times;</button>
+      <div class="install-icon" aria-hidden="true">
+        <img src="icon-192.png" alt="" width="64" height="64">
+      </div>
+      <div class="install-copy">
+        <span class="section-label">keep this forever</span>
+        <h2 class="section-title">Save me to your <em>home screen</em></h2>
+        <p class="install-text">Add this little corner as an app on your phone — it gets its own icon, opens full-screen like a real app, and keeps working even without internet.</p>
+        <button type="button" class="btn btn-primary" id="installBtn">Save to home screen</button>
+        <p class="install-hint" id="installHint"><b>On iPhone:</b> tap <span class="share-chip">Share</span> ⬆️ → "Add to Home Screen".&nbsp; <b>On Android:</b> tap ⋮ menu → "Install app".</p>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-title">Made with ❤ by Pentdragon</div>
@@ -308,5 +333,6 @@
 </div>
 
 <script src="app.js"></script>
+<script src="pwa.js"></script>
 </body>
 </html>
