@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday, Adedolapo 🎉</title>
+<meta name="description" content="A little birthday wish for Adedolapo — made with love by Dayo.">
+<meta property="og:title" content="Happy Birthday, Adedolapo 🎉">
+<meta property="og:description" content="A little corner of the internet, made just for you.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9D%A4%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="style.css">
+<noscript><style>.envelope{display:none}.letter{display:block}.letter-body .word{opacity:1;filter:none}.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+
+<div id="splash" aria-hidden="true">
+  <div class="splash-gift">🎁</div>
+  <div class="splash-line">Preparing something special…</div>
+  <div class="splash-dots"><span></span><span></span><span></span></div>
+  <button type="button" class="splash-retry" id="splashRetry">Try again</button>
+</div>
+
+<canvas id="fxCanvas" aria-hidden="true"></canvas>
+
+<main class="page-shell">
+
+  <header class="topbar">
+    <div class="topbar-left">
+      <div class="topbar-line"></div>
+      <span>for Adedolapo</span>
+    </div>
+    <div class="topbar-right">
+      <span>08 · 09 · 2026</span>
+      <div class="topbar-line"></div>
+    </div>
+  </header>
+
+  <!-- BIRTHDAY-DAY BANNER (auto-shown on Sept 8) -->
+  <div class="birthday-banner" id="birthdayBanner" aria-live="polite">
+    <span class="bb-cake" aria-hidden="true">🎂</span>
+    <span class="bb-eyebrow">today is the day</span>
+    <h2>Happy Birthday, Adedolapo!</h2>
+    <p>The waiting is over — today the world celebrates you. Every candle, every wish and every word on this page is yours. ❤️</p>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero reveal" id="hero">
+    <div class="hero-layout">
+      <div class="hero-copy">
+        <p class="eyebrow">a little birthday wish</p>
+        <h1 class="hero-title">Happy Birthday, <span class="title-name">Adedolapo</span> 👑❤️</h1>
+        <p class="hero-description">Today is your special day — a day to celebrate the beautiful soul that you are. This little corner of the internet was made just for you. 🌷</p>
+        <div class="hero-emojis" aria-hidden="true">👑 ❤️ 🌷</div>
+        <p class="hero-aside"><span class="gold-rule"></span>made with love, a little code, and a lot of missing you.</p>
+        <div class="hero-actions">
+          <a href="#letter-section" class="btn btn-primary">Read your letter ❤</a>
+          <a href="#cake-section" class="btn btn-ghost">Blow your candles</a>
+        </div>
+      </div>
+      <div class="date-card-wrap">
+        <div class="date-card">
+          <div class="date-eyebrow">save the date</div>
+          <div class="date-month">September</div>
+          <div class="date-day">08</div>
+          <div class="date-year">two thousand twenty-six</div>
+          <div class="date-note">the day the world got a little more beautiful</div>
+          <div class="date-spark" aria-hidden="true">✦</div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true">
+      <span>scroll</span>
+      <span class="arrow">↓</span>
+    </div>
+  </section>
+
+  <!-- MEMORIES -->
+  <section class="memories reveal" id="memories">
+    <div class="section-head">
+      <span class="section-label">chapter of us</span>
+      <h2 class="section-title">Moments of <em>you</em></h2>
+      <p class="section-sub">A few frames that deserve to be kept forever.</p>
+    </div>
+    <div class="memory-grid">
+      <figure class="memory-frame">
+        <img src="images/photo-one.jpg" alt="A kept memory of Adedolapo, photograph one" loading="lazy">
+        <figcaption>the smile that started it all</figcaption>
+      </figure>
+      <figure class="memory-frame">
+        <img src="images/photo-two.jpg" alt="A kept memory of Adedolapo, photograph two" loading="lazy">
+        <figcaption>golden hour, golden girl</figcaption>
+      </figure>
+      <figure class="memory-frame">
+        <img src="images/photo-three.jpg" alt="A kept memory of Adedolapo, photograph three" loading="lazy">
+        <figcaption>some moments don't need captions</figcaption>
+      </figure>
+      <figure class="memory-frame">
+        <img src="images/photo-four.jpg" alt="A kept memory of Adedolapo, photograph four" loading="lazy">
+        <figcaption>the smile that could light up any room</figcaption>
+      </figure>
+      <figure class="memory-frame">
+        <img src="images/photo-five.jpg" alt="A kept memory of Adedolapo, photograph five" loading="lazy">
+        <figcaption>effortless, as always</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- SURPRISE GARDEN -->
+  <section class="garden reveal" id="garden">
+    <div class="section-head">
+      <span class="section-label">three little notes</span>
+      <h2 class="section-title">Pick one — they're all <em>yours</em></h2>
+    </div>
+    <p class="garden-quote">"Some people make the world softer just by being in it."</p>
+    <div class="garden-buttons">
+      <button type="button" class="g-button heart-btn" id="btnHeart" aria-label="Open a birthday message for Adedolapo">❤<span class="g-hint">a note</span></button>
+      <button type="button" class="g-button flower-btn" id="btnFlower" aria-label="Open a magical message for Adedolapo">🌷<span class="g-hint">a bloom</span></button>
+      <button type="button" class="g-button sparkle-btn" id="btnSparkle" aria-label="Open a secret birthday surprise">✨<span class="g-hint">a secret</span></button>
+    </div>
+  </section>
+
+  <!-- TIMER -->
+  <section class="timer-section reveal" id="timer-section">
+    <span class="section-label">the countdown</span>
+    <h2 class="timer-title" id="timerTitle">Almost your day</h2>
+    <div class="timer-capsule" id="timerCapsule">september 08 · 2026</div>
+    <div class="timer-grid" id="timerGrid" role="timer" aria-live="off">
+      <div class="timer-box"><span class="timer-num" id="tDays">00</span><span class="timer-lab">days</span></div>
+      <div class="timer-box"><span class="timer-num" id="tHours">00</span><span class="timer-lab">hours</span></div>
+      <div class="timer-box"><span class="timer-num" id="tMins">00</span><span class="timer-lab">minutes</span></div>
+      <div class="timer-box"><span class="timer-num" id="tSecs">00</span><span class="timer-lab">seconds</span></div>
+    </div>
+    <p class="timer-note" id="timerNote">every second brings it closer <span class="gold-star">✦</span></p>
+  </section>
+
+  <!-- NEW CHAPTER -->
+  <section class="chapter-section reveal" id="chapter-section">
+    <div class="section-head">
+      <span class="section-label">a new year of you</span>
+      <h2 class="section-title">Three wishes for your <em>new chapter</em></h2>
+    </div>
+    <div class="chapter-cards">
+      <article class="chapter-card">
+        <span class="chapter-num">01</span>
+        <h3 class="chapter-title">Joy in the little things</h3>
+        <p class="chapter-text">May your mornings be gentle, your tea be warm, and small moments keep surprising you.</p>
+      </article>
+      <article class="chapter-card">
+        <span class="chapter-num">02</span>
+        <h3 class="chapter-title">Soft days ahead</h3>
+        <p class="chapter-text">May the year hold more rest than worry, and more light than shadow.</p>
+      </article>
+      <article class="chapter-card">
+        <span class="chapter-num">03</span>
+        <h3 class="chapter-title">Big dreams, always</h3>
+        <p class="chapter-text">May you keep reaching for everything you want — and find you were already enough.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- LETTER / ENVELOPE -->
+  <section class="letter-section reveal" id="letter-section">
+    <div class="section-head">
+      <span class="section-label">sealed with love</span>
+      <h2 class="section-title">A letter for <em>you</em></h2>
+    </div>
+    <div class="letter-stage">
+      <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open a birthday letter for Adedolapo">
+        <div class="env-top" aria-hidden="true"></div>
+        <div class="env-stamp" aria-hidden="true">08</div>
+        <div class="env-address">
+          <div class="to">to</div>
+          <div class="name">Adedolapo</div>
+        </div>
+        <div class="wax-seal" aria-hidden="true">❤</div>
+        <p class="env-hint">tap the seal to open</p>
+      </div>
+      <div class="letter" id="letter">
+        <div class="letter-eyebrow">08 · 09 · 2026</div>
+        <h3 class="letter-title">Dear Adedolapo,</h3>
+        <div class="letter-body" id="letterBody">
+          <p>Happy birthday to the most wonderful soul I know. Today the world quietly celebrates the day it received one of its brightest lights — <em>you</em>.</p>
+          <p>I wanted to build something just for you: a little corner of the internet where every pixel says the same thing — that you are loved, appreciated, and deeply missed.</p>
+          <p>May your new year of life be everything soft and golden. May it bring you laughter that fills rooms, peace that fills days, and dreams that finally come true.</p>
+          <p>I really miss you, Adedolapo. ❤️</p>
+        </div>
+        <div class="letter-sign">
+          <div class="date">08 · 09 · 2026</div>
+          <div class="with-love">with love</div>
+          <div class="sign-name">Pentdragon</div>
+          <div class="sign-sub">mostly known as Dayo</div>
+        </div>
+        <div class="letter-actions">
+          <a class="btn btn-primary" href="https://wa.me/2347078456173?text=I%20just%20saw%20your%20birthday%20surprise%20%E2%80%94%20thank%20you%20so%20much%20%E2%9D%A4%EF%B8%8F" target="_blank" rel="noopener">Reply to Dayo on WhatsApp ❤</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAKE / CANDLES -->
+  <section class="cake-section reveal" id="cake-section">
+    <div class="section-head">
+      <span class="section-label">make a wish</span>
+      <h2 class="section-title">Blow out your <em>candles</em></h2>
+      <p class="section-sub">Tap each flame — every candle hides a wish for you.</p>
+    </div>
+    <div class="cake-stage">
+      <div class="cake" aria-hidden="false">
+        <div class="cake-plate"></div>
+        <div class="tier bottom"><span class="dots"></span></div>
+        <div class="tier top"><span class="dots"></span></div>
+        <div class="candle-row" id="candleRow">
+          <div class="candle" role="button" tabindex="0" aria-label="First candle — tap to blow it out" data-wish="Happiness that doesn't need a reason."><div class="candle-stick"></div><div class="candle-wick"></div><div class="flame"></div><div class="smoke"></div></div>
+          <div class="candle" role="button" tabindex="0" aria-label="Second candle — tap to blow it out" data-wish="Peace that stays, even on the loud days."><div class="candle-stick"></div><div class="candle-wick"></div><div class="flame"></div><div class="smoke"></div></div>
+          <div class="candle" role="button" tabindex="0" aria-label="Third candle — tap to blow it out" data-wish="Success in everything you set your heart on."><div class="candle-stick"></div><div class="candle-wick"></div><div class="flame"></div><div class="smoke"></div></div>
+          <div class="candle" role="button" tabindex="0" aria-label="Fourth candle — tap to blow it out" data-wish="Moments so beautiful you'll want to keep them forever."><div class="candle-stick"></div><div class="candle-wick"></div><div class="flame"></div><div class="smoke"></div></div>
+        </div>
+      </div>
+      <p class="cake-hint" id="cakeHint">tap a flame to make a wish ✦</p>
+      <div class="cake-progress" id="cakeProgress" aria-hidden="true">
+        <span class="lit"></span><span></span><span></span><span></span>
+      </div>
+      <div class="wish-reveal" id="wishReveal" hidden>
+        <div class="wr-eyebrow">your wish</div>
+        <div class="wr-text" id="wishText"></div>
+      </div>
+      <div class="cake-finale" id="cakeFinale">
+        <p class="cf-text">All four wishes are yours, Adedolapo. 🎂</p>
+        <p class="cf-sub">May every one of them come true this year.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCRATCH SECRET -->
+  <section class="scratch-section reveal" id="scratch-section">
+    <div class="section-head">
+      <span class="section-label">one more thing</span>
+      <h2 class="section-title">A secret, <em>hidden</em> for you</h2>
+      <p class="section-sub">Scratch the panel below to uncover it.</p>
+    </div>
+    <div class="scratch-wrap">
+      <div class="scratch-under">
+        <span class="sc-eyebrow">a secret for you</span>
+        <span class="sc-big">You are, and always will be, my favorite person.</span>
+        <span class="sc-emoji">🤍</span>
+      </div>
+      <canvas id="scratchCanvas" aria-label="Scratch card — rub to reveal a hidden message" role="img"></canvas>
+    </div>
+    <p class="scratch-hint">use your finger or mouse to scratch</p>
+  </section>
+
+  <!-- MOMENTO -->
+  <section class="momento-section reveal" id="momento-section">
+    <div class="section-head">
+      <span class="section-label">a keepsake</span>
+      <h2 class="section-title">Take this with <em>you</em></h2>
+    </div>
+    <div class="momento-card">
+      <div class="card-deco top" aria-hidden="true">✦ ✦ ✦</div>
+      <p class="mo-eyebrow">a keepsake for Adedolapo</p>
+      <div class="mo-name">Adedolapo</div>
+      <div class="mo-date">08 · 09 · 2026</div>
+      <div class="mo-rule" aria-hidden="true"></div>
+      <div class="mo-wishes">
+        <p class="mo-wish"><b>i.</b> for endless joy</p>
+        <p class="mo-wish"><b>ii.</b> for soft days</p>
+        <p class="mo-wish"><b>iii.</b> for dreams that come true</p>
+        <p class="mo-wish"><b>iv.</b> and for you — always</p>
+      </div>
+      <div class="mo-sign">— dayo</div>
+      <div class="card-deco bottom" aria-hidden="true">✦ ✦ ✦</div>
+      <div class="momento-actions">
+        <a class="btn btn-ghost" href="https://wa.me/2347078456173?text=I%20just%20saw%20your%20birthday%20surprise%20%E2%80%94%20thank%20you%20so%20much%20%E2%9D%A4%EF%B8%8F" target="_blank" rel="noopener">Say thank you ❤</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-title">Made with ❤ by Pentdragon</div>
+    <div class="footer-sub">mostly known as Dayo · for Adedolapo · 08 · 09 · 2026</div>
+    <div class="footer-actions">
+      <a class="btn btn-primary" href="https://wa.me/2347078456173?text=I%20just%20saw%20your%20birthday%20surprise%20%E2%80%94%20thank%20you%20so%20much%20%E2%9D%A4%EF%B8%8F" target="_blank" rel="noopener">Send a reply on WhatsApp</a>
+    </div>
+    <div class="footer-note">some sites are built with code — this one was built with missing you.</div>
+  </footer>
+
+</main>
+
+<!-- MUSIC DOCK -->
+<div class="music-dock" id="musicDock">
+  <button type="button" class="music-btn" id="musicBtn" aria-label="Turn background music on" aria-pressed="false">♪</button>
+  <input type="range" id="musicVol" min="0" max="100" value="55" aria-label="Music volume">
+  <span class="music-label">music</span>
+</div>
+
+<!-- NOTE MODAL -->
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-eyebrow" id="modalEyebrow"></div>
+    <h3 class="modal-title" id="modalTitle"></h3>
+    <p class="modal-text" id="modalText"></p>
+    <button type="button" class="btn btn-ghost modal-close" id="modalClose" aria-label="Close message">close ✕</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
